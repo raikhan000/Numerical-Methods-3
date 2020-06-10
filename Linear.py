@@ -1,5 +1,6 @@
 import numpy as np
 from math import*
+import matplotlib.pyplot as plt
 def Index(x, mid_value):
     left = 0
     right = len(x) - 1
@@ -48,4 +49,11 @@ for i in range(m):
 mid_y = phi(x, y, m)
 
 print(mid_y)
+
+x1 = np.concatenate((x,mid), axis=0)
+y1 = np.concatenate((y,mid_y), axis=0)
+
+plt.scatter(x1,y1)
+plt.plot(mid,mid_y)
+plt.show()
 
