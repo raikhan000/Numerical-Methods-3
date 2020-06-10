@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 def phi(i,z):
     p = 1.0
@@ -39,3 +40,9 @@ for i in range(m):
     mid_y = P(x, y, mid[i])
 print(mid_y)
 
+x1 = np.concatenate((x,mid), axis=0)
+y1 = np.concatenate((y,mid_y), axis=0)
+
+plt.scatter(x1,y1)
+plt.plot(mid,mid_y)
+plt.show()
